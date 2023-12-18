@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://chat-cesn.onrender.com/', {
+    const response = await fetch('https://bardock.cyclic.app/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
