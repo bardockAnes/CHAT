@@ -32,12 +32,12 @@ app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
         async function main() {
-        messageHistory.push({"role": "user", "content": `${prompt}`});
+      //  messageHistory.push({"role": "user", "content": `${prompt}`});
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
-                {"role": "system", "content": "You are a helpful assistant, Continuosly engage in dialogue based on previous questions and answers"},
-                ...messageHistory 
+                {"role": "system", "content": "You are a helpful assistant "},
+                {"role" : "user", "content": `${prompt}`}
               ],
             temperature: 0,
             max_tokens: 35,
@@ -46,8 +46,8 @@ app.post('/', async (req, res) => {
             presence_penalty: 0,
         });
 
-        const assistantResponse = response.choices[0].message.content;
-        messageHistory.push({"role": "assistant", "content": assistantResponse});
+       // const assistantResponse = response.choices[0].message.content;
+       // messageHistory.push({"role": "assistant", "content": assistantResponse});
 
         console.log("Message history:", messageHistory);
         res.status(200).send({ 
