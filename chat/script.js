@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 // https://bardock.cyclic.app/
-    const response = await fetch('https://bardock.cyclic.app/', {
+    const response = await fetch('https://bardock.cyclic.app', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
