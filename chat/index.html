@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <title>Chat</title>
@@ -10,6 +10,8 @@
   <body>
     <div id="app">
     <div id="chat_container"></div>
+    <button id="audio" class="audio">play</button>
+    <audio id="audioPlayer"></audio>
     <form>
       <textarea name="prompt" rows="1" cols="1" placeholder="Ask Codex..."></textarea>
       <button type="submit"><img src="/assets_codex/assets/send.svg"></button>

@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
-
+// https://bardock.cyclic.app/
     const response = await fetch('https://bardock.cyclic.app/', {
         method: 'POST',
         headers: {
@@ -119,3 +119,9 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
+document.getElementById('audio').addEventListener('click', function() {
+    var audioPlayer = new Audio();
+  var uniqueUrl = 'https://bardock.cyclic.app/speech?' + new Date().getTime();  // Append a timestamp to the URL to force re-fetching
+  audioPlayer.src = uniqueUrl;
+  audioPlayer.play();
+  });
