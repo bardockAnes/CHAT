@@ -55,17 +55,18 @@ app.post('/', async (req, res) => {
          console.log(assistantResponse)
         // messageHistory.push({"role": "assistant", "content": assistantResponse});
         // console.log("Message history:", messageHistory);
-
+/*
         const mp3 = await openai.audio.speech.create({
             model: "tts-1",
             voice: "onyx",
             input: assistantResponse
         });
 
+
         const buffer = Buffer.from(await mp3.arrayBuffer());
         await fs.promises.writeFile(speechFile, buffer);
         console.log("Speech file saved:", speechFile);
-
+*/
 
 
         res.status(200).send({ 
